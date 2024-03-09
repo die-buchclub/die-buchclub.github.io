@@ -1,18 +1,21 @@
 ---
 layout: page
-title: About
+title: Über Uns
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Wir sprechen etwa einmal im Monat über Romane von Frauen aus einer feministischen Perspektive.
+Wenn du mehr darüber wissen willst, was "feministisch Lesen" heißen kann, schau doch [hier]({% link femcrit.markdown %}) vorbei.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Für alle Feminist*Innen, und die, die es noch werden wollen :) 
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Es wird keine Theorie abgeprüft, wir bleiben in der Welt der Fiction. 
+Wir wollen wissen, was DEINE kritische, feministische Lesestimme zu den Büchern zu sagen hat
 
+Es sind alle Interresierten, ob Frau* oder nicht, herzlich eingeladen sich zu uns dazuzusetzen und mitzureden!
 
-[jekyll-organization]: https://github.com/jekyll
+Interessiert? Code scannen und der WhatsApp Community beitreten, um auf dem neuesten Stand zu bleiben ->
+
+![alt text](/assets/joinwhatsapp.png)
+
+Noch Fragen? Schick uns gern eine mail an diebuchclub.vie@gmail.com
