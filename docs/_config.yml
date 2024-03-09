@@ -21,7 +21,7 @@
 title: Die Buchclub
 email: diebuchclub.vie@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Wir lesen Romane von Frauen aus feministischer Perspektive und unterhalten uns darüber in netten Cafes in Wien.
+  Wir lesen Romane von Frauen aus feministischer Perspektive und unterhalten uns darüber.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://die-buchclub.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
