@@ -19,4 +19,6 @@ Interessiert? Code scannen und der WhatsApp Community beitreten, um auf dem neue
 
 ![alt text](/assets/joinwhatsapp.png)
 
+(oder [hier auf den link clicken](https://chat.whatsapp.com/GpDiea8Qhq4HlbLNVWah69))
+
 Noch Fragen? Schick uns gern eine mail an diebuchclub.vie@gmail.com
