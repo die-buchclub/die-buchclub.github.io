@@ -21,12 +21,11 @@ Ab jetzt gibts die <b>"A Tale for the Time Being"-Gruppe</b> der Whatsapp Commun
 Diese fungiert als "Voranmeldung", damit wir ungefähr abschätzen können wie viele wir sein werden. Spontan vorbeikommen geht natürlich trotzdem immer, so lange Platz ist.
 
 
-📲 Über [diesen Link](https://chat.whatsapp.com/ByFf0TN0sapCuCifXkbIYW)
- kannst du der "A Tale for the Time Being"-Gruppe der Whatsapp Community beitreten! Hier kann man sich über das Treffen austauschen, wenn man
- Interesse hat vorbeizuschauen. 
+![bookcover](/assets/WhatsApp_icon.png){: width="25" } Über [diesen Link](https://chat.whatsapp.com/ByFf0TN0sapCuCifXkbIYW)
+ kannst du der "A Tale for the Time Being"-Gruppe der Whatsapp Community beitreten! Hier kann man sich unverbindlich voranmelden und informieren
 
 
-📲 Über [diesen Link](https://chat.whatsapp.com/GpDiea8Qhq4HlbLNVWah69)
- kannst du der Announcement Gruppe der Whatsapp Community beitreten! Das ist sozusagen ein News Feed, dort werden ca. 1x im Monat neue Treffen vom Andmin angekündigt.
+![bookcover](/assets/pink-book.png){: width="25" }  Über [diesen Link](https://chat.whatsapp.com/GpDiea8Qhq4HlbLNVWah69)
+ kannst du der *Whatsapp Community* beitreten! Das ist sozusagen ein News Feed, dort werden ca. 1x im Monat neue Treffen vom Andmin in den Announcements angekündigt.
 
 Noch Fragen? Schick uns gern eine mail an diebuchclub.vie@gmail.com

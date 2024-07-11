@@ -21,12 +21,12 @@ Wo genau wir uns treffen hängt von der Gruppengröße ab, daher gibts ab jetzt 
 Diese fungiert als "Voranmeldung", damit wir ungefähr abschätzen können wie viele wir sein werden. Spontan vorbeikommen geht natürlich trotzdem immer, so lange Platz ist.
 
 
-📲 Über [diesen Link](https://chat.whatsapp.com/GpDiea8Qhq4HlbLNVWah69)
+![bookcover](/assets/WhatsApp_icon.png){: width="25" } Über [diesen Link](https://chat.whatsapp.com/GpDiea8Qhq4HlbLNVWah69)
  kannst du der "Die Waffen nieder!"-Gruppe der Whatsapp Community beitreten! Hier kann man sich über das Treffen am 26.4. austauschen, wenn man
  Interesse vorbeizuschauen. 
 
 
-📲 Über [diesen Link](https://chat.whatsapp.com/GpDiea8Qhq4HlbLNVWah69)
+![bookcover](/assets/pink-book.png){: width="25" } Über [diesen Link](https://chat.whatsapp.com/GpDiea8Qhq4HlbLNVWah69)
  kannst du der Announcement Gruppe der Whatsapp Community beitreten! Das ist sozusagen ein News Feed, dort werden ca. 1x im Monat neue Treffen vom Andmin angekündigt.
 
 Noch Fragen? Schick uns gern eine mail an diebuchclub.vie@gmail.com
