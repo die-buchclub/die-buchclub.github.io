@@ -15,18 +15,18 @@ Es sind ALLE willkommen, wir begrüßen jede Leseratte. An dieser Stelle noch ei
 Ausschreibung fürs erste Treffen kommt am <b>24.3.</b>, ab da gern bescheid geben falls man vorbeischauen möchte. 
 Bis dahin kann man ganz unverbindlich unserer Whatsapp Community beitreten, um laufen Infos zu den nächsten Treffen und Büchern zu erhalten. 
 
-📲 Über [diesen Link](https://chat.whatsapp.com/GpDiea8Qhq4HlbLNVWah69)
- kannst du der Announcement Gruppe der Whatsapp Community beitreten! Das ist sozusagen ein News Feed, dort werden ca. 1x im Monat neue Treffen vom Andmin angekündigt.
+
+![bookcover](/assets/WhatsApp_icon.png){: width="25" } Über [diesen Link](https://chat.whatsapp.com/GpDiea8Qhq4HlbLNVWah69)
+ kannst du der Whatsapp Community beitreten! Das ist sozusagen ein News Feed, dort werden ca. 1x im Monat neue Treffen vom Andmin angekündigt.
+
+
+❗ 🔒 In einer Whatsapp Community ist deine Telefonnummer geschützt. Wenn du einer Gruppe innerhalb der Community beitritts, wird sie für die anderen Mitglieder der Gruppe sichtbar.
 
 
 Interessiert? Code scannen und der WhatsApp Community beitreten, um auf dem neuesten Stand zu bleiben 
 
-ℹ️ In einer Whatsapp Community sieht erstmal nur der Admin deine Nummer, wenn du einer Gruppe innerhalb der Community beitritts werden die anderen Mitglieder der Gruppe für dich sichtbar
-
 
 ![alt text](/assets/joinwhatsapp.png)
-
-(oder [hier auf den link clicken](https://chat.whatsapp.com/GpDiea8Qhq4HlbLNVWah69))
 
 
 

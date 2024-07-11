@@ -16,11 +16,11 @@ Es sind alle Interresierten, ob Frau* oder nicht, herzlich eingeladen sich zu un
 
 Interessiert? Code scannen und der WhatsApp Community beitreten, um auf dem neuesten Stand zu bleiben 
 
-📲 Über [diesen Link](https://chat.whatsapp.com/GpDiea8Qhq4HlbLNVWah69)
- kannst du der Announcement Gruppe der Whatsapp Community beitreten! Das ist sozusagen ein News Feed, dort werden ca. 1x im Monat neue Treffen vom Andmin angekündigt.
+![bookcover](/assets/WhatsApp_icon.png){: width="25" } Über [diesen Link](https://chat.whatsapp.com/GpDiea8Qhq4HlbLNVWah69)
+ kannst du der Whatsapp Community beitreten! Das ist sozusagen ein News Feed, dort werden ca. 1x im Monat neue Treffen vom Andmin angekündigt.
 
 
-ℹ️ In einer Whatsapp Community sieht erstmal nur der Admin deine Nummer, wenn du einer Gruppe innerhalb der Community beitritts werden die anderen Mitglieder der Gruppe für dich sichtbar
+❗ 🔒 In einer Whatsapp Community ist deine Telefonnummer geschützt. Wenn du einer Gruppe innerhalb der Community beitritts, wird sie für die anderen Mitglieder der Gruppe sichtbar.
 
 ![alt text](/assets/joinwhatsapp.png)
 
@@ -28,3 +28,5 @@ Interessiert? Code scannen und der WhatsApp Community beitreten, um auf dem neue
 
 
 Noch Fragen? Schick uns gern eine mail an diebuchclub.vie@gmail.com
+
+![bookcover](/assets/insta.webp){: width="25" } Oder DM an unsere instagram page unter <a href="http://instagram.com/_u/diebuchclub/">@diebuchclub</a>
