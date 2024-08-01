@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Die Blütezeit der Miss Jean Brodie"
+title:  "Die Blütezeit der Miss Jean Brodie - 20.9."
 ---
 
 # Leserunde zu "Die Blütezeit der Miss Jean Brodie - 20.9."
