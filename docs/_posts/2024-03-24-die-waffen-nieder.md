@@ -14,8 +14,7 @@ Das Buch schildert das Leben der jungen Frau Martha, welches von Heldenverehrung
 und zuletzt Widerstand zu jeder Zeit von Krieg geprägt ist. 
 Die großen Themen drehen sich um Krieg und Frieden, aber auch um die Rolle der Frau in der Kriegsgesellschaft.
 
-![alt text](/assets/bertha.jpg)
-
+![die-waffen-nieder.jpg](/assets/books/die-waffen-nieder.jpg)
 
 Wo genau wir uns treffen hängt von der Gruppengröße ab, daher gibts ab jetzt die <b>"Die Waffen nieder!"-Gruppe</b> der Whatsapp Community.
 Diese fungiert als "Voranmeldung", damit wir ungefähr abschätzen können wie viele wir sein werden. Spontan vorbeikommen geht natürlich trotzdem immer, so lange Platz ist.

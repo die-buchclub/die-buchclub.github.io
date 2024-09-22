@@ -17,7 +17,7 @@ Mittel einzusetzten, um eine "Normale" Facade Aufrecht zu erhalten.
 Eine Satire der modernen Gesellschaft, bei der widersprüchliche soziale Normen ad absurdum geführt werden.
 
 
-![alt text](/assets/sayaka.png)
+![die-ladenhueterin.png](/assets/books/die-ladenhueterin.png)
 
 
 Ab jetzt gibts die <b>"Die Ladenhueterin"-Gruppe</b> der Whatsapp Community.

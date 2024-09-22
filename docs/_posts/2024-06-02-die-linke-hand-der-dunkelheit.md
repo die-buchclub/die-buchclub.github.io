@@ -7,7 +7,7 @@ title:  "Die linke Hand der Dunkelheit - 5.7."
 
 Es ist so weit, das nächste Die Buchclub treffen steht an. Am <b>5.7.</b> quatschen wir über "Die linke Hand der Dunkelheit" von  Ursula K. Le Guin
 
-![bookcover](/assets/ursula.jpg)
+![die-linke-hand-der-dunkelheit.jpg](/assets/books/die-linke-hand-der-dunkelheit.jpg)
 
 Unser Protagonist Genly Ai landet mit seinem Raumschiff auf dem Planeten Winter. Als entsandter Diplomat und einziges menschliches Alien 
 auf Winter berichtet er pflichtbewusst seine Navigation durch eine für ihn undurchsichtige Gesellschaft. Die Bewohner des Planeten 

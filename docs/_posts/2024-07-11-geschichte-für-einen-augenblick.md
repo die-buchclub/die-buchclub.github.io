@@ -7,7 +7,7 @@ title:  "Geschichte für einen Augenblick - 16.8."
 
 Es ist so weit, das nächste Die Buchclub treffen steht an. Am <b>16.8.</b> quatschen wir über "Geschichte für einen Augenblick" (original: A Tale for the Time Being) von Ruth Ozeki.
 
-![bookcover](/assets/ruth.jpg){: width="250" }
+![geschichte-für-einen-augenblick.jpg](/assets/books/geschichte-für-einen-augenblick.jpg){: width="250" }
 
 Die Schriftstellerin Ruth findet bei einem Strand-Spaziergang eine alte Hello-Kitty-Luchbox, in der sich das Tagebuch der Teenagerin Nao befindet. Ruth wird von Nao's Tagebucheinträgen eingefangen und taucht in das Leben der jungen Japanerin ein.
 Die intimen Seiten erählen von Mobbing, Depressionen, suizidalen Gedanken, familiären Problemen, aber auch von Jiko: Nao's liebevoller Urgroßmutter und anarchistisch-feministischer, buddhistischer Nonne.

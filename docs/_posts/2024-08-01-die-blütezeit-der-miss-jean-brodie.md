@@ -7,7 +7,7 @@ title:  "Die Blütezeit der Miss Jean Brodie - 20.9."
 
 Das Die Buchclub treffen im November ist für den <b>20.9.</b> geplant. Dann quatschen wir über "Die Blütezeit der Miss Jean Brodie" (original: The Prime of Miss Jean Brodie) von Muriel Spark.
 
-![bookcover](/assets/die-bluetezeit-der-miss-jean-brodie-9783257070088.jpg){: width="250" }
+![die-blütezeit-der-miss-jean-brodie.jpg](/assets/books/die-blütezeit-der-miss-jean-brodie.jpg){: width="250" }
 
 Jean Brodie ist Lehrerin an einer schottischen Mädchenschule im Edinburgh der 1930er. Um sich herum scharrt sie eine Gruppe von 6 auserwählten jungen Mädchen, die überall als die elitäre "Brodie-Truppe" bekannt sind.
 
