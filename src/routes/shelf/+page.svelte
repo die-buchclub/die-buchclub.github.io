@@ -24,7 +24,7 @@
 
     books.sort((a, b) => a.id - b.id);
 
-    let toggle = false;
+    let toggle = true;
 
     function togglePages() {
         toggle = !toggle;
