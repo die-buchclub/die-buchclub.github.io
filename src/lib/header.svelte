@@ -1,5 +1,6 @@
 <script>
     import FaWhatsapp from 'svelte-icons/fa/FaWhatsapp.svelte';
+    import { base } from '$app/paths';
 </script>
 
 <style>
@@ -32,18 +33,20 @@
             </div>
             <ul tabindex="0"
                 class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                <li><a>Item 1</a></li>
-                <li><a>Item 2</a></li>
+                <li><a href="{base}/join">Über uns</a></li>
+                <li><a href="{base}/shelf">Unser Bücherregal</a></li>
+                <li><a href="{base}/faq">FAQ</a></li>
+                <li><a href="{base}/femcrit">Feministische Literaturkritik</a></li>
             </ul>
         </div>
-        <a class="btn btn-ghost text-xl" href="/">Die Buchclub</a>
+        <a class="btn btn-ghost text-xl" href="{base}/">Die Buchclub</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <li><a href="/join">Über uns</a></li>
-            <li><a href="/shelf">Unser Bücherregal</a></li>
-            <li><a href="/faq">FAQ</a></li>
-            <li><a href="/femcrit">Feministische Literaturkritik</a></li>
+            <li><a href="{base}/join">Über uns</a></li>
+            <li><a href="{base}/shelf">Unser Bücherregal</a></li>
+            <li><a href="{base}/faq">FAQ</a></li>
+            <li><a href="{base}/femcrit">Feministische Literaturkritik</a></li>
         </ul>
     </div>
     <div class="navbar-end">
