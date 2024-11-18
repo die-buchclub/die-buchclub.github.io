@@ -8,6 +8,12 @@
         margin-left: 160px;
         margin-right: 160px;
     }
+    @media (max-width: 768px) {
+        main {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
 </style>
 
 <header>

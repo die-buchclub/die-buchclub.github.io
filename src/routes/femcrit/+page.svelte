@@ -34,6 +34,31 @@
             width: 20px;
             height: 20px;
         }
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 20px; /* Adjust title size for smaller screens */
+            }
+
+            .about {
+                flex-direction: column; /* Stack cards vertically on mobile */
+                align-items: center; /* Center items */
+            }
+
+            .card {
+                width: 100%; /* Make the cards full width on mobile */
+                margin: 10px 0; /* Adjust margins for mobile */
+            }
+
+            .examples {
+                width: 100%; /* Ensure examples section is full width */
+            }
+
+            .timeline-middle {
+                width: 10px; /* Reduce timeline size for smaller screens */
+                height: 10px;
+            }
+        }
     }
 </style>
 
@@ -51,8 +76,8 @@
             <div class="card bg-base-100 w-96 shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title">No na ned, was hat das mit Kritik zu tun?</h2>
-                    <p>Einen Text kann man aus unterschiedlichen Winkeln beleuchten (bspw.:
-                        marxistische/psychoanalytische/postkoloniale/uvm. Literaturkritik).</p>
+                    <p>Einen Text kann man aus unterschiedlichen Winkeln beleuchten</p>
+                    <p> (bspw.: marxistische/ psychoanalytische/ postkoloniale/ uvm. Literaturkritik)</p>
                 </div>
             </div>
             <div class="card bg-base-100 w-96 shadow-xl">
