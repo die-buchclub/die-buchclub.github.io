@@ -1,5 +1,6 @@
 <script lang="ts">
     import Layout from '../../lib/layout.svelte';
+    import { base } from '$app/paths';
 
     interface Book {
         id: number;
@@ -119,7 +120,7 @@
             {#each books as book}
                 <div class="book-container">
                     <div class="book">
-                        <img src={book.coverSrc}/>
+                        <img src={base}{book.coverSrc}/>
                     </div>
                 </div>
             {/each}

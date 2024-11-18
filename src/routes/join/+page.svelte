@@ -1,5 +1,6 @@
 <script>
     import Layout from "$lib/layout.svelte";
+    import { base } from '$app/paths';
 </script>
 
 <style>
@@ -74,7 +75,7 @@
         </div>
         <div class="chat chat-end">
             <div class="chat-bubble chat-bubble-warning">
-                <p>Helfen dir die <a href="/faq">FAQ's</a> nicht weiter?</p>
+                <p>Helfen dir die <a href="{base}/faq">FAQ's</a> nicht weiter?</p>
                 <p>
                     Dann schreib uns doch gern auf Instagram unter
                 <a href="https://www.instagram.com/diebuchclub/">@diebuchclub</a> oder ne mail an die-buchclub.vie@gmail.com

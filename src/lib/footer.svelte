@@ -2,6 +2,7 @@
     import FaInstagram from 'svelte-icons/fa/FaInstagram.svelte';
     import FaWhatsapp from 'svelte-icons/fa/FaWhatsapp.svelte';
     import {clickToCopyWithTooltip} from '../services/click-to-copy.service.ts';
+    import BookIcon from '$lib/assets/favicon.png';
 </script>
 
 <style>
@@ -21,7 +22,7 @@
 
 <footer class="footer bg-neutral text-neutral-content items-center p-4">
     <aside class="grid-flow-col items-center">
-        <img src="../../favicon.png" alt="logo" class="logo">
+        <img src="{BookIcon}" alt="logo" class="logo">
             <div>
                 Die Buchclub
             </div>
