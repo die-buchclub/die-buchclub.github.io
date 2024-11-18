@@ -1,20 +1,22 @@
 <script lang="ts">
 
+    import WorldMap from './WorldMap.svelte';
+
     export let books;
 
     import {Arc, BarChart, Chart, Group, Svg, Text} from 'layerchart';
     import {Tooltip} from "layerchart";
     import {PieChart} from "layerchart";
-    import { interpolateRainbow } from 'd3-scale-chromatic';
-    import { scaleQuantize  } from 'd3-scale';
+    import {interpolateRainbow} from 'd3-scale-chromatic';
+    import {scaleQuantize} from 'd3-scale';
 
     const buckets = [
-        { label: "<150", x0: 0, x1: 150 },
-        { label: "150-200", x0: 150, x1: 200 },
-        { label: "200-250", x0: 200, x1: 250 },
-        { label: "250-300", x0: 250, x1: 300 },
-        { label: "300-350", x0: 300, x1: 350 },
-        { label: ">350", x0: 350, x1: Infinity },
+        {label: "<150", x0: 0, x1: 150},
+        {label: "150-200", x0: 150, x1: 200},
+        {label: "200-250", x0: 200, x1: 250},
+        {label: "250-300", x0: 250, x1: 300},
+        {label: "300-350", x0: 300, x1: 350},
+        {label: ">350", x0: 350, x1: Infinity},
 
     ];
 
@@ -54,6 +56,11 @@
 <style>
     .graph {
         width: 70%;
+        margin: 20px;
+    }
+
+    .title {
+        font-weight: bold;
     }
 </style>
 
@@ -77,10 +84,10 @@
                     <Tooltip.Root let:data>
                         <Tooltip.Header class="text-center">{data.label}</Tooltip.Header>
                         <Tooltip.List>
-                            <Tooltip.Item label="Count" value={data.length} format="integer" />
-                            <Tooltip.Separator />
+                            <Tooltip.Item label="Count" value={data.length} format="integer"/>
+                            <Tooltip.Separator/>
                             {#each data.books.slice(0, 5) as book}
-                                <Tooltip.Item label={book.title} value={book.pages} />
+                                <Tooltip.Item label={book.title} value={book.pages}/>
                             {/each}
                             {#if data.books.length > 5}
                                 <span></span>
@@ -115,4 +122,8 @@
         </ul>
     </div>
 
+    <div class="graph mapGraph">
+        <h1 class="title">Wurzeln unserer Autorinnen</h1>
+        <WorldMap {books}></WorldMap>
+    </div>
 </div>

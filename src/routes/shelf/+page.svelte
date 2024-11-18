@@ -11,7 +11,8 @@
         year: string;
         genre: string,
         pages: number,
-        publicationYear: number
+        publicationYear: number,
+        country: string[]
     }
 
     let books: Book[] = [];
