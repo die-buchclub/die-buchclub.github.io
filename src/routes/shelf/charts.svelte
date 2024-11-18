@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 
     export let books;
 
@@ -7,19 +7,6 @@
     import {PieChart} from "layerchart";
     import { interpolateRainbow } from 'd3-scale-chromatic';
     import { scaleQuantize  } from 'd3-scale';
-
-    const genreData = [
-        { genre: "Fantasy", count: 3 },
-        { genre: "Sci-Fi", count: 2 },
-        { genre: "Mystery", count: 1 },
-    ];
-
-    const genreDataNew = Object.entries(
-        books.reduce((acc, book) => {
-            acc[book.genre] = (acc[book.genre] || 0) + 1;
-            return acc;
-        }, {})
-    ).map(([genre, count]) => ({ genre, count }));
 
     const buckets = [
         { label: "<150", x0: 0, x1: 150 },
@@ -43,47 +30,79 @@
         };
     });
 
+    const colorRange = [
+        "hsl(353 73.8% 67.1%)",
+        "hsl(336 42.9% 48%)",
+        "hsl(333 94.4% 86.1%)",
+        "hsl(182 33.6% 55.1%)",
+        "hsl(344 38.5% 28%)",
+        "hsl(331 79.2% 60.4%)",
+        "hsl(319 22.2% 85.9%)"
+    ];
 
-    const colorRange = scaleQuantize()
-        .domain([0, genreDataNew.length - 1])  // Domain should be based on the number of slices
-        .range([...Array(5)].map((_, i) => interpolateRainbow(i / 5)));  // Generate 5 colors
+    const genreCounts = books.reduce((acc, book) => {
+        acc[book.genre] = (acc[book.genre] || 0) + 1;
+        return acc;
+    }, {});
 
-    console.log(colorRange(0)); // Should log the first color
-    console.log(colorRange(1)); // Should log the second color
-    console.log(colorRange(2)); // And so on...
+    const genreData = Object.entries(genreCounts).map(([genre, value]) => ({
+        genre,
+        value
+    }))
 </script>
 
+<style>
+    .graph {
+        width: 70%;
+    }
+</style>
+
 <div>
-    <h1>Anzahl an Seiten</h1>
-    <div class="h-[300px] p-4 border rounded">
-        <BarChart
-                data={histogramData}
-                x="label"
-                y="length"
-                bandPadding={0.2}
-                props={{
+    <div class="graph pageCountGraph">
+        <h1 class="title">Anzahl an Seiten</h1>
+        <div class="h-[300px] p-4 border rounded">
+            <BarChart
+                    data={histogramData}
+                    x="label"
+                    y="length"
+                    bandPadding={0.2}
+                    props={{
                     highlight: { area: false },
                     xAxis: { tweened: true },
                     yAxis: { format: "metric", tweened: true },
                     bars: { tweened: true,  class: "fill-primary", stroke: "white" },
     }}
-        >
-            <svelte:fragment slot="tooltip">
-                <Tooltip.Root let:data>
-                    <Tooltip.Header class="text-center">{data.label}</Tooltip.Header>
-                    <Tooltip.List>
-                        <Tooltip.Item label="Count" value={data.length} format="integer" />
-                        <Tooltip.Separator />
-                        {#each data.books.slice(0, 5) as book}
-                            <Tooltip.Item label={book.title} value={book.pages} />
-                        {/each}
-                        {#if data.books.length > 5}
-                            <span></span>
-                            <span>...</span>
-                        {/if}
-                    </Tooltip.List>
-                </Tooltip.Root>
-            </svelte:fragment>
-        </BarChart>
+            >
+                <svelte:fragment slot="tooltip">
+                    <Tooltip.Root let:data>
+                        <Tooltip.Header class="text-center">{data.label}</Tooltip.Header>
+                        <Tooltip.List>
+                            <Tooltip.Item label="Count" value={data.length} format="integer" />
+                            <Tooltip.Separator />
+                            {#each data.books.slice(0, 5) as book}
+                                <Tooltip.Item label={book.title} value={book.pages} />
+                            {/each}
+                            {#if data.books.length > 5}
+                                <span></span>
+                                <span>...</span>
+                            {/if}
+                        </Tooltip.List>
+                    </Tooltip.Root>
+                </svelte:fragment>
+            </BarChart>
+        </div>
+    </div>
+
+    <div class="graph genresGraph">
+        <h1 class="title">Genres</h1>
+        <div class="h-[300px] p-4 border rounded">
+            <PieChart
+                    data={genreData}
+                    key="genre"
+                    value="value"
+                    legend={{ placement: "left", orientation: "vertical" }}
+                    cRange={colorRange}
+            />
+        </div>
     </div>
 </div>
