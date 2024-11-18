@@ -105,4 +105,14 @@
             />
         </div>
     </div>
+
+    <div class="graph yearGraph">
+        <h1 class="title">Erstveröffentlichung</h1>
+        <ul class="steps steps-vertical lg:steps-horizontal">
+            {#each books.sort((a, b) => a.publicationYear - b.publicationYear) as book}
+                <li data-content="{book.publicationYear}" class="step step-primary">{book.author}</li>
+            {/each}
+        </ul>
+    </div>
+
 </div>
