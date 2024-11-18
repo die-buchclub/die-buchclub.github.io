@@ -1,6 +1,8 @@
 <script lang="ts">
 
     import WorldMap from './WorldMap.svelte';
+    import { onMount } from 'svelte';
+    import { writable } from 'svelte/store';
 
     export let books;
 
@@ -9,6 +11,21 @@
     import {PieChart} from "layerchart";
     import {interpolateRainbow} from 'd3-scale-chromatic';
     import {scaleQuantize} from 'd3-scale';
+
+    const screenWidth = writable(window.innerWidth);
+
+    // Listen for window resize events to update the screen width
+    onMount(() => {
+        const handleResize = () => {
+            screenWidth.set(window.innerWidth);
+        };
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener when the component is destroyed
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    });
 
     const buckets = [
         {label: "<150", x0: 0, x1: 150},
@@ -62,68 +79,91 @@
     .title {
         font-weight: bold;
     }
+
+    /* Mobile responsiveness */
+    @media (max-width: 900px) {
+        .graph {
+            margin: 0;
+            width: 100%;
+        }
+        .pie-chart-legend {
+            margin-top: 20px; /* Adjust margin between chart and legend */
+        }
+    }
+
+    .legend-below {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
 </style>
 
 <div>
-    <div class="graph pageCountGraph">
-        <h1 class="title">Anzahl an Seiten</h1>
-        <div class="h-[300px] p-4 border rounded">
-            <BarChart
-                    data={histogramData}
-                    x="label"
-                    y="length"
-                    bandPadding={0.2}
-                    props={{
+    <div class="graphs">
+        <div class="graph pageCountGraph">
+            <h1 class="title">Anzahl an Seiten</h1>
+            <div class="h-[300px] p-4 border rounded">
+                <BarChart
+                        data={histogramData}
+                        x="label"
+                        y="length"
+                        bandPadding={0.2}
+                        props={{
                     highlight: { area: false },
                     xAxis: { tweened: true },
                     yAxis: { format: "metric", tweened: true },
                     bars: { tweened: true,  class: "fill-primary", stroke: "white" },
     }}
-            >
-                <svelte:fragment slot="tooltip">
-                    <Tooltip.Root let:data>
-                        <Tooltip.Header class="text-center">{data.label}</Tooltip.Header>
-                        <Tooltip.List>
-                            <Tooltip.Item label="Count" value={data.length} format="integer"/>
-                            <Tooltip.Separator/>
-                            {#each data.books.slice(0, 5) as book}
-                                <Tooltip.Item label={book.title} value={book.pages}/>
-                            {/each}
-                            {#if data.books.length > 5}
-                                <span></span>
-                                <span>...</span>
-                            {/if}
-                        </Tooltip.List>
-                    </Tooltip.Root>
-                </svelte:fragment>
-            </BarChart>
+                >
+                    <svelte:fragment slot="tooltip">
+                        <Tooltip.Root let:data>
+                            <Tooltip.Header class="text-center">{data.label}</Tooltip.Header>
+                            <Tooltip.List>
+                                <Tooltip.Item label="Count" value={data.length} format="integer"/>
+                                <Tooltip.Separator/>
+                                {#each data.books.slice(0, 5) as book}
+                                    <Tooltip.Item label={book.title} value={book.pages}/>
+                                {/each}
+                                {#if data.books.length > 5}
+                                    <span></span>
+                                    <span>...</span>
+                                {/if}
+                            </Tooltip.List>
+                        </Tooltip.Root>
+                    </svelte:fragment>
+                </BarChart>
+            </div>
+        </div>
+
+        <div class="graph genresGraph">
+            <h1 class="title">Genres</h1>
+            <div class="h-[300px] p-4 border rounded">
+                <PieChart
+                        data={genreData}
+                        key="genre"
+                        value="value"
+                        legend={{
+                            placement: $screenWidth < 900 ? "bottom-left" : "left", // Change placement on mobile
+                            orientation:  "vertical" }
+                            }
+                        cRange={colorRange}
+                />
+            </div>
+        </div>
+
+        <div class="graph yearGraph">
+            <h1 class="title">Erstveröffentlichung</h1>
+            <ul class="steps steps-vertical lg:steps-horizontal">
+                {#each books.sort((a, b) => a.publicationYear - b.publicationYear) as book}
+                    <li data-content="{book.publicationYear}" class="step step-primary">{book.author}</li>
+                {/each}
+            </ul>
+        </div>
+
+        <div class="graph mapGraph">
+            <h1 class="title">Wurzeln unserer Autorinnen</h1>
+            <WorldMap {books}></WorldMap>
         </div>
     </div>
 
-    <div class="graph genresGraph">
-        <h1 class="title">Genres</h1>
-        <div class="h-[300px] p-4 border rounded">
-            <PieChart
-                    data={genreData}
-                    key="genre"
-                    value="value"
-                    legend={{ placement: "left", orientation: "vertical" }}
-                    cRange={colorRange}
-            />
-        </div>
-    </div>
-
-    <div class="graph yearGraph">
-        <h1 class="title">Erstveröffentlichung</h1>
-        <ul class="steps steps-vertical lg:steps-horizontal">
-            {#each books.sort((a, b) => a.publicationYear - b.publicationYear) as book}
-                <li data-content="{book.publicationYear}" class="step step-primary">{book.author}</li>
-            {/each}
-        </ul>
-    </div>
-
-    <div class="graph mapGraph">
-        <h1 class="title">Wurzeln unserer Autorinnen</h1>
-        <WorldMap {books}></WorldMap>
-    </div>
 </div>
