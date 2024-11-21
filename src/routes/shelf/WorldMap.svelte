@@ -12,25 +12,31 @@
         return acc;
     }, {});
 
-    onMount(async () => {
-        const width = 960;
-        const height = 500;
+    let svg; // Reference to the SVG element
+    let projection; // Reference to the map projection
+    let path; // Reference to the path generator
+    let geojson; // Reference to the loaded GeoJSON data
 
-        // Create an SVG container for the map
-        const svg = d3.select('#map')
+    const renderMap = () => {
+        const container = document.getElementById('map');
+        const width = container.clientWidth;
+        const height = Math.min(width / 2, 500); // Maintain aspect ratio and limit height
+
+        // Adjust projection based on new dimensions
+        projection = d3.geoMercator()
+            .scale((width / 960) * 150) // Scale based on the original width
+            .translate([width / 2, height / 2]);
+
+        path = d3.geoPath().projection(projection);
+
+        // Clear existing SVG
+        d3.select('#map svg').remove();
+
+        // Create a new SVG container
+        svg = d3.select('#map')
             .append('svg')
             .attr('width', width)
             .attr('height', height);
-
-        // Set up a mercator projection for the map
-        const projection = d3.geoMercator()
-            .scale(150)
-            .translate([width / 2, height / 2]);
-
-        const path = d3.geoPath().projection(projection);
-
-        // Load the GeoJSON data for the world map
-        const geojson = await d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson");
 
         // Add countries to the map
         svg.selectAll("path")
@@ -41,7 +47,7 @@
             .attr("fill", d => {
                 const countryName = d.properties.name;
                 const bookCount = bookCountByCountry[countryName] || 0;
-                return bookCount > 0 ? "#69b3a2" : "#ccc";  // Green for countries with books, grey for others
+                return bookCount > 0 ? "#69b3a2" : "#ccc"; // Green for countries with books, grey for others
             })
             .attr("stroke", "#fff")
             .attr("stroke-width", 0.5)
@@ -65,13 +71,27 @@
             })
             .append("title")
             .text(d => `${d.properties.name}: ${bookCountByCountry[d.properties.name] || 0} books`);
+    };
+
+    onMount(async () => {
+        // Load the GeoJSON data for the world map
+        geojson = await d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson");
+
+        renderMap(); // Render the map initially
+
+        // Add a resize listener
+        window.addEventListener('resize', renderMap);
+
+        return () => {
+            window.removeEventListener('resize', renderMap);
+        };
     });
 </script>
 
 <style>
     #map {
         width: 100%;
-        height: 500px;
+        height: auto;
         margin: 0 auto;
         position: relative;
     }
@@ -85,6 +105,13 @@
         border-radius: 3px;
         visibility: hidden;
         font-size: 14px;
+    }
+
+    /* Ensure the SVG scales well on small screens */
+    svg {
+        display: block;
+        max-width: 100%;
+        height: auto;
     }
 </style>
 
