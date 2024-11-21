@@ -2,18 +2,7 @@
     import Layout from '../../lib/layout.svelte';
     import {base} from '$app/paths';
     import Charts from './charts.svelte';
-
-    interface Book {
-        id: number;
-        title: string;
-        author: string;
-        coverSrc: string;
-        year: string;
-        genre: string,
-        pages: number,
-        publicationYear: number,
-        country: string[]
-    }
+    import type {Book} from "$lib/assets/Book.interface";
 
     let books: Book[] = [];
 

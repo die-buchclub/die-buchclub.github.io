@@ -1,11 +1,24 @@
 {
   "id": 6,
-  "title": "\n\nDie Blütezeit der Miss Jean Brodie",
+  "title": "Die Blütezeit der Miss Jean Brodie",
   "author": "Muriel Spark",
   "coverSrc": "/covers/brodie.jpg",
   "year": "2024",
   "genre": "Classics",
   "pages": 170,
   "publicationYear": 1961,
-  "country": ["England"]
+  "country": ["England"],
+  "keywords": [
+    "Erziehung",
+    "Faschismus",
+    "Frauen",
+    "Macht",
+    "Manipulation",
+    "Bildung",
+    "Verrat",
+    "Individualität",
+    "Feminismus",
+    "Freundschaft"
+  ]
 }
+

@@ -3,6 +3,8 @@
     import WorldMap from './WorldMap.svelte';
     import { onMount } from 'svelte';
     import { writable } from 'svelte/store';
+    import type {Book} from "$lib/assets/Book.interface";
+
 
     export let books;
 
@@ -58,14 +60,6 @@
         "hsl(331 79.2% 60.4%)",
         "hsl(319 22.2% 85.9%)"
     ];
-
-    interface Book {
-        genre: string;
-        title: string;
-        pages: number;
-        publicationYear: number;
-        author: string;
-    }
 
     interface GenreCount {
         count: number;
