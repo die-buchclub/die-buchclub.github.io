@@ -14,16 +14,24 @@
             margin-right: 20px;
         }
     }
+
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 </style>
 
-<header>
-    <Header/>
-</header>
+<div class="page-container">
+    <header>
+        <Header/>
+    </header>
 
-<main>
-    <slot></slot>
-</main>
+    <main>
+        <slot></slot>
+    </main>
 
-<footer>
-    <Footer/>
-</footer>
+    <footer class="footer">
+        <Footer/>
+    </footer>
+</div>

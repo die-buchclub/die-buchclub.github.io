@@ -8,12 +8,14 @@
 <style>
     .logo {
         width: 60px;
-        height: 60px;
+        height: auto;
     }
+
     .icon {
         width: 36px;
-        height: 36px;
+        height: auto;
     }
+
     .btn-link {
         padding-left: 0;
         padding-top: 0;
@@ -22,15 +24,18 @@
 
 <footer class="footer bg-neutral text-neutral-content items-center p-4">
     <aside class="grid-flow-col items-center">
-        <img src="{BookIcon}" alt="logo" class="logo">
-            <div>
-                Die Buchclub
-            </div>
-            <br>
+        <img src="{BookIcon}" alt="logo" class="logo"/>
+        <p>
+            Die Buchclub
+            <br/>
             <a class="btn btn-link" use:clickToCopyWithTooltip={'die-buchclub.vie@gmail.com'}>
                 die-buchclub.vie@gmail.com
             </a>
+        </p>
     </aside>
+    <nav>
+
+    </nav>
     <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <a class="btn" href="https://www.instagram.com/diebuchclub/">
             <div class="icon">
