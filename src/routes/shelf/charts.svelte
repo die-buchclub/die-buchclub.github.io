@@ -59,15 +59,35 @@
         "hsl(319 22.2% 85.9%)"
     ];
 
-    const genreCounts = books.reduce((acc, book) => {
-        acc[book.genre] = (acc[book.genre] || 0) + 1;
-        return acc;
-    }, {});
+    interface Book {
+        genre: string;
+        title: string;
+        pages: number;
+        publicationYear: number;
+        author: string;
+    }
 
-    const genreData = Object.entries(genreCounts).map(([genre, value]) => ({
+    interface GenreCount {
+        count: number;
+        books: Book[];
+    }
+
+    const genreCounts = books.reduce((acc: Record<string, GenreCount>, book: Book) => {
+        if (!acc[book.genre]) {
+            acc[book.genre] = { count: 0, books: [] };
+        }
+
+        acc[book.genre].count += 1;
+        acc[book.genre].books.push(book);
+
+        return acc;
+    }, {} as Record<string, GenreCount>);
+
+    const genreData = Object.entries(genreCounts).map(([genre, { count, books }]) => ({
         genre,
-        value
-    }))
+        value: count,
+        books,
+    }));
 </script>
 
 <style>
@@ -116,7 +136,7 @@
     }}
                 >
                     <svelte:fragment slot="tooltip">
-                        <Tooltip.Root let:data>
+                        <Tooltip.Root class="backdrop-blur-[200px]" let:data>
                             <Tooltip.Header class="text-center">{data.label}</Tooltip.Header>
                             <Tooltip.List>
                                 <Tooltip.Item label="Count" value={data.length} format="integer"/>
@@ -147,7 +167,24 @@
                             orientation:  "vertical" }
                             }
                         cRange={colorRange}
-                />
+                >
+                    <svelte:fragment slot="tooltip">
+                        <Tooltip.Root class="backdrop-blur-[200px]" let:data>
+                            <Tooltip.Header class="text-center">{data.genre}</Tooltip.Header>
+                            <Tooltip.List>
+                                <Tooltip.Item label="Count" value="{data.value}" format="integer"/>
+                                <Tooltip.Separator/>
+                                {#each data.books.slice(0, 5) as book}
+                                    <Tooltip.Item label ="" value={book.title}/>
+                                {/each}
+                                {#if data.books.length > 5}
+                                    <span></span>
+                                    <span>...</span>
+                                {/if}
+                            </Tooltip.List>
+                        </Tooltip.Root>
+                    </svelte:fragment>
+                </PieChart>
             </div>
         </div>
 
