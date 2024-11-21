@@ -28,7 +28,7 @@
     // Dynamically adjust dimensions based on screen size
     function updateDimensions() {
         if (window.innerWidth < 768) {
-            // Mobile dimensions
+            // Mobile dimensions (screen width < 768px)
             dimensions = {
                 width: 340,
                 height: 800,
@@ -39,8 +39,20 @@
                     left: 0
                 }
             };
+        } else if (window.innerWidth < 1024) {
+            // Tablet dimensions (screen width between 768px and 1024px)
+            dimensions = {
+                width: 600,
+                height: 600,
+                margin: {
+                    top: 24,
+                    right: 0,
+                    bottom: 0,
+                    left: 0
+                }
+            };
         } else {
-            // Desktop dimensions
+            // Desktop dimensions (screen width >= 1024px)
             dimensions = {
                 width: 840,
                 height: 600,
@@ -141,3 +153,12 @@
         {/each}
     </g>
 </svg>
+
+<style>
+    svg {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+</style>
