@@ -13,6 +13,7 @@
     import {PieChart} from "layerchart";
     import {interpolateRainbow} from 'd3-scale-chromatic';
     import {scaleQuantize} from 'd3-scale';
+    import WordCloud from "./WordCloud.svelte";
 
     const screenWidth = writable(window.innerWidth);
 
@@ -82,6 +83,18 @@
         value: count,
         books,
     }));
+
+    // wordcloud config
+    const wordCloudDimensions = {
+        width: 840,
+        height: 600,
+        margin: {
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0
+        }
+    }
 </script>
 
 <style>
@@ -195,6 +208,16 @@
             <h1 class="title">Wurzeln unserer Autorinnen</h1>
             <WorldMap {books}></WorldMap>
         </div>
+
+        <div class="graph themesGraph">
+            <h1 class="title">Themen unserer Bücher</h1>
+            <WordCloud  title=""
+                        description=""
+                        text=""
+                        dimensions={wordCloudDimensions}
+            ></WordCloud>
+        </div>
     </div>
+
 
 </div>
