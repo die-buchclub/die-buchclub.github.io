@@ -33,7 +33,7 @@
     <div class="belt">
         {#each display as book}
             <div class="book">
-                <img src={book.coverSrc} alt={`${book.title} – ${book.author}`} />
+                <img src={base}{book.coverSrc} alt={`${book.title} – ${book.author}`} />
             </div>
         {/each}
     </div>
