@@ -1,0 +1,17 @@
+{
+  "id": 23,
+  "title": "Lady Susan",
+  "author": "Jane Austen",
+  "coverSrc": "/covers/lady.jpg",
+  "year": "2026",
+  "genre": "Romance",
+  "pages": 180 ,
+  "publicationYear": 1871,
+  "country": ["England"],
+  "keywords": [
+    "Heiraten",
+    "Historisch",
+    "Gaslighting",
+    "Anti-Heldin"
+  ]
+}
